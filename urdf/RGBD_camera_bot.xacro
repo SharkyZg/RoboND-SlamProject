@@ -35,7 +35,7 @@
 
   <joint type="fixed" name="camera_joint">
     <origin xyz="0.2 0 0" rpy="0 0 0"/>
-    <child link="camera"/>
+    <child link="camera_rgbd_frame"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
@@ -121,7 +121,7 @@
     </visual>
   </link>
 
-  <link name='camera'>
+  <link name='camera_rgbd_frame'>
       <xacro:inertial_cuboid_with_pose mass=".1" x_length="0.05" y_length="0.05" z_length="0.05" >
         <origin xyz="0.0 0 0" rpy=" 0 0 0"/>
       </xacro:inertial_cuboid_with_pose>  
